@@ -21,11 +21,11 @@ feature 'viewing home page' do
   end
 
   scenario 'I can filter links by tag' do
-    visit '/tags/bubbbles'
+    visit '/tags/bubbles'
     within 'ul#links' do
       expect(page).not_to have_content('Makers Academy')
       expect(page).not_to have_content('Code.org')
-      expect(page).to have_content('This is Zombocom')
+      expect(page).to have_content('Zombocom')
       expect(page).to have_content('Bubble Bobble')
     end
   end
